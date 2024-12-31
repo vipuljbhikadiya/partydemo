@@ -1,0 +1,28 @@
+{
+	"name": "bingo-partyserver",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev --ip 0.0.0.0",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.5.40",
+		"@cloudflare/workers-types": "^4.20241224.0",
+		"@types/jsonwebtoken": "^9.0.7",
+		"@types/node": "^22.10.2",
+		"typescript": "^5.7.2",
+		"vitest": "2.1.8",
+		"wrangler": "3.99.0"
+	},
+	"dependencies": {
+		"bingo-card-generator": "^2.0.0",
+		"jsonwebtoken": "^9.0.2",
+		"ky": "^1.7.4",
+		"partyserver": "^0.0.58",
+		"zod": "^3.24.1"
+	}
+}
