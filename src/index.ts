@@ -54,6 +54,7 @@ export class BingoServer extends Server<Env> {
 	}
 
 	async onRequest(request: Request): Promise<Response> {
+		return Response("Request received", { status: 200 });
 		return handleRequest(request, this.ctx);
 	}
 
@@ -70,9 +71,6 @@ export class BingoServer extends Server<Env> {
 
 export default {
 	async fetch(request: Request, env: Env) {
-		const result = await authenticateRequest(request, env);
-		if (result instanceof Response) return result;
-		const response = await routePartykitRequest(result, env);
-		return response instanceof Response ? response : new Response('Hello World!', { status: 404 });
+		(await routePartykitRequest(request, env)) || new Response("Not Found", { status: 404 })
 	},
 };
