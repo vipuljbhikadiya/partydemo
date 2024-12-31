@@ -22,7 +22,7 @@ A real-time multiplayer bingo game server built with PartyKit and Cloudflare Wor
 
 bash
 Clone the repository
-git clone https://github.com/samunderwood/bingo-partyserver.git
+git clone git@github.com:vipuljbhikadiya/partydemo.git
 Navigate to project directory
 cd bingo-partyserver
 Install dependencies
